@@ -1,0 +1,146 @@
+/* Start global */
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Tahoma;
+  list-style: none;
+}
+
+/* End global */
+
+/* Start navigation bar */
+
+nav {
+  height: 70px;
+  background-color: #222;
+  border-bottom: 1px solid #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  width: auto;
+}
+
+.logo img {
+  height: 55px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+.list-item li {
+  margin: 0 15px;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+.list-item li a {
+  color: #EEE;
+}
+
+.list-item li:hover {
+  background-color: brown;
+}
+
+/* End navigation bar */
+
+/* Start nav bar for small screens */
+
+.icon {
+  display: none;
+}
+
+.toggle {
+  display: none;
+  color: #EEE;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* End nav bar for small screens */
+
+/* Start media query */
+
+@media (max-width: 1309px) {
+  .toggle {
+      display: block;
+  }
+
+  .list-item {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background-color: #222;
+      width: 100%;
+      text-align: center;
+  }
+
+  .list-item.show {
+      display: flex;
+  }
+
+  .list-item li {
+      width: 100%;
+      margin: 0;
+      border-bottom: 1px solid #333;
+  }
+}
+
+.avatar-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar {
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.dropdown p {
+  margin-bottom: 5px;
+  color: #EEE;
+  font-weight: bold;
+}
+
+.dropdown a {
+  color: #EEE;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown a:hover {
+  color: brown;
+}
+
+/* End media query */
+
